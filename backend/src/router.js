@@ -10,4 +10,8 @@ router.put("/items/:id", itemControllers.edit);
 router.post("/items", itemControllers.add);
 router.delete("/items/:id", itemControllers.destroy);
 
+const challengeControllers = require("./controllers/challengeControllers");
+
+router.get("/challenges", challengeControllers.browse);
+
 module.exports = router;

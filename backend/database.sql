@@ -5,6 +5,17 @@ CREATE TABLE item (
 
 INSERT INTO item (title) VALUES ('Stuff'), ('Doodads');
 
+CREATE TABLE category
+(
+	id            INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	category_name VARCHAR(100)        NOT NULL
+) engine = InnoDB
+  default charset = latin1;
+
+INSERT INTO category (category_name)
+VALUES ('Restaurant'),
+	   ('Evenement');
+
 CREATE TABLE challenge
 (
 	id                INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
