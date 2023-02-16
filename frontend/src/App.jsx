@@ -1,11 +1,8 @@
 import Home from "./pages/Home";
+import ChallengesCard from "./components/ChallengesCard";
 
 function App() {
-  return (
-    <div className="App">
-      <Home />
-    </div>
-  );
+  return <><Home /><ChallengesCard /><>;
 }
 
 export default App;
