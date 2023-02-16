@@ -8,7 +8,7 @@ function App() {
       <Home />
       <ChallengesCard />
       <Footer />
-   </>
+    </>
   );
 }
 
