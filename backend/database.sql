@@ -5,24 +5,16 @@ CREATE TABLE item (
 
 INSERT INTO item (title) VALUES ('Stuff'), ('Doodads');
 
-CREATE TABLE category (
-  id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  category_name VARCHAR(100) NOT NULL
-) engine = InnoDB default charset = latin1;
-
-INSERT INTO category (category_name) VALUES ('Restaurant'), ('Evenement');
-
 CREATE TABLE challenge (
   id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   title VARCHAR(200) NOT NULL,
+  level_challenge VARCHAR(100) NOT NULL,
   description_challenge VARCHAR(900) NOT NULL,
   points VARCHAR(100) NOT NULL,
+  time_challenge VARCHAR(100) NOT NULL,
   tips VARCHAR(200) NOT NULL,
-	category_id INT NOT NULL,
-	CONSTRAINT fk_challenge_category
-		FOREIGN KEY (category_id)
-			REFERENCES category (id)
+	category VARCHAR(15)
 ) engine = InnoDB default charset = utf8mb4;
 
-INSERT INTO challenge (title, description_challenge, points, tips, category_id)
-VALUES ('Lorem', 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', "2", 'Lorem ipsum dolor sit amet.', 1);
+INSERT INTO challenge (title, level_challenge, description_challenge, points, time_challenge, tips, category)
+VALUES ('Lorem',"A1 - Facile", 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', "2", "10 minutes",'Lorem ipsum dolor sit amet.', "Restaurant");

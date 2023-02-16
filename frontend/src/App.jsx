@@ -1,11 +1,14 @@
 import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import ChallengesCard from "./components/ChallengesCard";
 
 function App() {
   return (
-    <div className="App">
-      <p>coucou</p>
+    <>
+      <Home />
+      <ChallengesCard />
       <Footer />
-    </div>
+   </>
   );
 }
 
