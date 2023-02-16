@@ -8,11 +8,13 @@ INSERT INTO item (title) VALUES ('Stuff'), ('Doodads');
 CREATE TABLE challenge (
   id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   title VARCHAR(200) NOT NULL,
+  level_challenge VARCHAR(100) NOT NULL,
   description_challenge VARCHAR(900) NOT NULL,
   points VARCHAR(100) NOT NULL,
+  time_challenge VARCHAR(100) NOT NULL,
   tips VARCHAR(200) NOT NULL,
 	category VARCHAR(15)
 ) engine = InnoDB default charset = utf8mb4;
 
-INSERT INTO challenge (title, description_challenge, points, tips, category_id)
-VALUES ('Lorem', 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', "2", 'Lorem ipsum dolor sit amet.', "Restaurant");
+INSERT INTO challenge (title, level_challenge, description_challenge, points, time_challenge, tips, category)
+VALUES ('Lorem',"A1 - Facile", 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', "2", "10 minutes",'Lorem ipsum dolor sit amet.', "Restaurant");

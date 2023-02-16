@@ -1,9 +1,7 @@
+import ChallengesCard from "./components/ChallengesCard";
+
 function App() {
-  return (
-    <div className="App">
-      <p>coucou</p>
-    </div>
-  );
+  return <ChallengesCard />;
 }
 
 export default App;
