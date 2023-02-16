@@ -15,14 +15,23 @@ body {
   left: 0;
   right: 0;
   background-color: #de5021;
+  max-height: 4rem;
+  padding: 0.7rem;
 }
 
-img {
-  width: 40px;
+.home {
+  max-width: 27px;
 }
-
-button {
-  padding: 16px 20px;
+.target {
+  max-width: 27px;
+}
+.classement {
+  max-width: 27px;
+}
+.tips {
+  max-width: 27px;
+}
+.buttonnav {
   border: none;
   background-color: #de5021;
 }

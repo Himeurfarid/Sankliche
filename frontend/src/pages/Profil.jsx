@@ -3,7 +3,8 @@ import Footer from "../components/Footer";
 function Profil() {
   return (
     <>
-      <p>PAGE PROFIL</p>
+      <p>Mon profil</p>
+      <p>Déconnexion</p>
       <Footer />
     </>
   );
