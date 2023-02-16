@@ -1,12 +1,12 @@
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import ChallengesCard from "./components/ChallengesCard";
+import Header from "./components/Header";
 
 function App() {
   return (
     <>
+      <Header />
       <Home />
-      <ChallengesCard />
       <Footer />
     </>
   );

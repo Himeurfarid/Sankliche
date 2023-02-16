@@ -1,14 +1,14 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
-function Tips() {
+function Challenges() {
   return (
-    <>
+    <div>
       <Header />
-      <p>PAGE TIPS</p>
+      <div> classement </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
-export default Tips;
+export default Challenges;

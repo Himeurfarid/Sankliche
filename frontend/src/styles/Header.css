@@ -1,0 +1,23 @@
+.header-app {
+  display: grid;
+  grid-template-columns: 10fr 1fr;
+  padding: 0.7rem 0.7rem 0.7rem 0.7rem;
+}
+.logosankliche {
+  max-width: 3rem;
+}
+.buttonprofil {
+  background-color: white;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.linkprofil {
+  display: grid;
+  align-items: center;
+  text-align: end;
+}
+.profil {
+  width: 27px;
+  height: 27px;
+}
