@@ -1,5 +1,7 @@
 ## Setup & Use
 
+Project Sankliché
+
 ### Project Initialization
 
 - In VSCode, install plugins **Prettier - Code formatter** and **ESLint** and configure them
