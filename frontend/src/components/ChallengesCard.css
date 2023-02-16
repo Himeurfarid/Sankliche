@@ -1,0 +1,42 @@
+.challengescard {
+  display: grid;
+  grid-template-columns: 3fr 6fr 2fr;
+  text-align: center;
+  border: solid;
+  border-radius: 1rem;
+  padding: 0.5rem;
+}
+.titleandlevelchallenges {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  align-items: center;
+}
+.descriptionchallenges {
+  display: grid;
+  align-items: center;
+}
+.timeandpointchallenges {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+}
+.titlechallenge {
+  margin: 0;
+  font-size: 15px;
+}
+.levelchallenge {
+  font-size: 10px;
+  margin: 0;
+}
+.descriptionchallenge {
+  font-size: 10px;
+  margin: 0;
+}
+.timechallenge {
+  font-size: 10px;
+  margin: 0;
+}
+.scorechallenge {
+  font-size: 10px;
+  margin: 0;
+}
