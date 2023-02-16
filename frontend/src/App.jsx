@@ -1,7 +1,13 @@
+import Home from "./pages/Home";
 import ChallengesCard from "./components/ChallengesCard";
 
 function App() {
-  return <ChallengesCard />;
+  return (
+    <>
+      <Home />
+      <ChallengesCard />
+    </>
+  );
 }
 
 export default App;
