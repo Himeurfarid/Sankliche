@@ -2,7 +2,7 @@
   display: grid;
   gap: 5px;
 }
-.challengescardeasy {
+.challengescard {
   display: grid;
   grid-template-columns: 3fr 6fr 2fr;
   text-align: center;
@@ -13,39 +13,7 @@
     -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
   background-color: greenyellow;
 }
-.challengescardnormal {
-  display: grid;
-  grid-template-columns: 3fr 6fr 2fr;
-  text-align: center;
-  border: solid;
-  border-radius: 0.5rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
-    -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
-  background-color: rgb(13, 126, 206);
-}
-.challengescardhard {
-  display: grid;
-  grid-template-columns: 3fr 6fr 2fr;
-  text-align: center;
-  border: solid;
-  border-radius: 0.5rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
-    -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
-  background-color: rgb(227, 37, 27);
-}
-.challengescardeasy:active {
-  transform: scale(0.9, 0.9);
-  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
-    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
-}
-.challengescardnormal:active {
-  transform: scale(0.9, 0.9);
-  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
-    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
-}
-.challengescardhard:active {
+.challengescard:active {
   transform: scale(0.9, 0.9);
   box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
     -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
