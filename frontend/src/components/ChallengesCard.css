@@ -3,22 +3,32 @@
   grid-template-columns: 3fr 6fr 2fr;
   text-align: center;
   border: solid;
-  border-radius: 1rem;
-  padding: 0.5rem;
+  border-radius: 0.25rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+}
+.challengescard:active {
+  transform: scale(0.9, 0.9);
+  box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
 }
 .titleandlevelchallenges {
   display: grid;
   grid-template-rows: 2fr 1fr;
   align-items: center;
+  padding: 0.2rem;
 }
 .descriptionchallenges {
   display: grid;
   align-items: center;
+  padding: 0.2rem;
 }
 .timeandpointchallenges {
   display: grid;
   grid-template-rows: 1fr 1fr;
   align-items: center;
+  padding: 0.2rem;
 }
 .titlechallenge {
   margin: 0;
