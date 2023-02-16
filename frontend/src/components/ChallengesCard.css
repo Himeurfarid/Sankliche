@@ -1,17 +1,11 @@
-.challenge {
-  display: grid;
-  gap: 5px;
-}
 .challengescard {
   display: grid;
-  grid-template-columns: 3fr 6fr 2fr;
-  text-align: center;
-  border: solid;
-  border-radius: 0.5rem;
+  grid-template-columns: 5fr 1fr;
+  padding: 0.5rem;
+  border-radius: 1rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
     -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
-  background-color: greenyellow;
 }
 .challengescard:active {
   transform: scale(0.9, 0.9);
@@ -21,19 +15,10 @@
 .titleandlevelchallenges {
   display: grid;
   grid-template-rows: 2fr 1fr;
-  align-items: center;
-  padding: 0.2rem;
-}
-.descriptionchallenges {
-  display: grid;
-  align-items: center;
-  padding: 0.2rem;
 }
 .timeandpointchallenges {
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  align-items: center;
-  padding: 0.2rem;
+  text-align: center;
 }
 .titlechallenge {
   margin: 0;
@@ -42,6 +27,7 @@
 .levelchallenge {
   font-size: 10px;
   margin: 0;
+  padding: 0rem 0rem 0rem 1rem;
 }
 .descriptionchallenge {
   font-size: 10px;
@@ -51,7 +37,18 @@
   font-size: 10px;
   margin: 0;
 }
+.logotime {
+  width: 15px;
+  height: 15px;
+}
+.logoandtime {
+  display: grid;
+  grid-template-columns: 20px 40px;
+  justify-content: center;
+  align-items: center;
+}
 .scorechallenge {
-  font-size: 10px;
+  font-size: 15px;
+  font-weight: bold;
   margin: 0;
 }
