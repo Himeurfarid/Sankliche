@@ -11,6 +11,7 @@ function Challenge({ challenges }) {
           <ChallengesCard
             title={challenge.title}
             levelChallenge={challenge.level_challenge}
+            timeChallenge={challenge.time_challenge}
             points={challenge.points}
             key={challenge.title}
           />
@@ -25,6 +26,7 @@ Challenge.propTypes = {
       title: PropTypes.string.isRequired,
       levelChallenge: PropTypes.string.isRequired,
       points: PropTypes.string.isRequired,
+      timeChallenge: PropTypes.string.isRequired,
     }).isRequired
   ).isRequired,
 };
