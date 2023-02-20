@@ -23,6 +23,8 @@ function ChallengeDetails() {
       <p>{challenge.time_challenge}</p>
       <p>{challenge.level_challenge}</p>
       <p>{challenge.description_challenge}</p>
+      <p>{challenge.tips}</p>
+      <p>{challenge.category}</p>
     </div>
   );
 }
