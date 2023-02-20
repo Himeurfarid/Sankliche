@@ -2,6 +2,8 @@
   display: grid;
   grid-template-columns: 10fr 1fr;
   padding: 0.7rem 0.7rem 0.7rem 0.7rem;
+  margin: 0rem 0rem 2rem 0rem;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
 }
 .logosankliche {
   max-width: 3rem;

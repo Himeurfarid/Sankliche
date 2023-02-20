@@ -5,6 +5,7 @@ import Header from "../components/Header";
 
 function Challenges() {
   const [getChallenge, setGetChallenge] = useState([]);
+
   useEffect(() => {
     fetch(
       `${
@@ -18,7 +19,7 @@ function Challenges() {
   return (
     <>
       <Header />
-      <ListChallenges challenges={getChallenge} />;
+      <ListChallenges challenges={getChallenge} />
       <Footer />
     </>
   );
