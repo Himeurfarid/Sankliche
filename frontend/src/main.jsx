@@ -16,7 +16,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/challenges" element={<Challenges />} />
-        <Route path="/challenges/:id" element={<ChallengeDetails />} />
+        <Route exact path="/challenge/:id" element={<ChallengeDetails />} />
         <Route path="/profil" element={<Profil />} />
         <Route path="/classement" element={<Classement />} />
         <Route path="/tips" element={<Tips />} />
