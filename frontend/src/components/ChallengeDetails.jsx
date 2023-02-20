@@ -22,6 +22,7 @@ function ChallengeDetails() {
       <p>{challenge.points}</p>
       <p>{challenge.time_challenge}</p>
       <p>{challenge.level_challenge}</p>
+      <p>{challenge.description_challenge}</p>
     </div>
   );
 }
