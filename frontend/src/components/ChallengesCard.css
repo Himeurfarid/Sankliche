@@ -1,6 +1,14 @@
 a {
   all: unset;
 }
+button {
+  all: unset;
+}
+.listcardchallenge {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
 .challengescard {
   display: grid;
   grid-template-columns: 5fr 1fr;

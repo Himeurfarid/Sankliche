@@ -4,7 +4,7 @@ import time from "../assets/time.png";
 
 function Challenge({ title, points, timechallenge, levelchallenge }) {
   return (
-    <div className="challengescard">
+    <button type="button" className="challengescard">
       <div className="titleandlevelchallenges">
         <h1 className="titlechallenge">{title}</h1>
         <p className="levelchallenge">{levelchallenge}</p>
@@ -16,7 +16,7 @@ function Challenge({ title, points, timechallenge, levelchallenge }) {
           <p className="timechallenge">{timechallenge}</p>
         </div>
       </div>
-    </div>
+    </button>
   );
 }
 Challenge.propTypes = {
