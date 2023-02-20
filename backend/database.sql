@@ -17,4 +17,5 @@ CREATE TABLE challenge (
 ) engine = InnoDB default charset = utf8mb4;
 
 INSERT INTO challenge (title, level_challenge, description_challenge, points, time_challenge, tips, category)
-VALUES ('Miam-Miam !',"A1 - Facile", 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', "2", "10 min",'Lorem ipsum dolor sit amet.', "Restaurant");
+VALUES ('Miam-Miam !',"A1 - Facile", 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', "2", "10 min",'Lorem ipsum dolor sit amet.', "Restaurant"), 
+       ('Visite la ville !',"B2 - Moyen", 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', "5", "30 min",'Lorem ipsum dolor sit amet.', "Ville");
