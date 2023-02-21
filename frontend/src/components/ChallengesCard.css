@@ -11,7 +11,7 @@ button {
 }
 .challengescard {
   display: grid;
-  grid-template-columns: 5fr 1fr;
+  grid-template-columns: 50fr 1fr;
   padding: 0.5rem;
   margin: 0rem 0.7rem 0rem 0.7rem;
   border-radius: 1rem;
