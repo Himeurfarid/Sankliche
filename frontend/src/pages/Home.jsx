@@ -1,4 +1,5 @@
 import Card from "../components/Card";
+import "./Home.css";
 
 export default function Home() {
   return (
@@ -6,11 +7,15 @@ export default function Home() {
       <div className="section">
         <div className="title">Sankliché</div>
         <div className="title">
-          Une nouvelle façcon d'apprendre la langue de façon ludique où l'on
-          peut apprendre seul ou en équipe :D
+          Une nouvelle façon d'apprendre la langue de façon ludique où l'on peut
+          apprendre seul ou en équipe. :D
         </div>
-        <div className="title">Réaliser und défi</div>
-        <div className="title">Rejoindre une équipe</div>
+        <button type="button" className="button">
+          Réaliser un défi
+        </button>
+        <button type="button" className="button">
+          Rejoindre une équipe
+        </button>
       </div>
       <div className="section">
         <div className="title">Mes stats</div>
