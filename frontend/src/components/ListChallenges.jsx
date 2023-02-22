@@ -5,7 +5,7 @@ import ChallengesCard from "./ChallengesCard";
 
 function ListChallenges({ challenges }) {
   return (
-    <div className="listcardchallenge">
+    <div className="list-card-challenge">
       {challenges.map((challenge) => {
         return (
           <Link to={`/challenge/${challenge.id}`} key={challenge.id}>

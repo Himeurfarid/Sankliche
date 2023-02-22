@@ -3,13 +3,13 @@
   margin: 1rem 1rem 5rem 1rem;
 }
 
-.cardtips-deck {
+.card-tips-deck {
   display: flex;
   flex-wrap: wrap;
   margin: -1rem;
 }
 
-.cardtips {
+.card-tips {
   flex: 1;
   margin: 1rem;
   padding: 1.5rem;
@@ -18,13 +18,13 @@
   border-radius: 0.5rem;
 }
 
-.cardtips h3 {
+.card-tips h3 {
   margin-top: 0;
   font-size: 1.25rem;
   font-weight: bold;
 }
 
-.cardtips p {
+.card-tips p {
   font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 0;

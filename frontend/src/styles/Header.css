@@ -1,19 +1,19 @@
 .header-app {
   display: grid;
   grid-template-columns: 10fr 1fr;
-  padding: 0.7rem 0.7rem 0.7rem 0.7rem;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.6);
+  padding: 0.2rem 0.7rem 0rem 0.7rem;
+  border-bottom: 1px solid #ccc;
 }
-.logosankliche {
+.logo-sankliche {
   max-width: 3rem;
 }
-.buttonprofil {
+.button-profil {
   background-color: white;
   border: none;
   margin: 0;
   padding: 0;
 }
-.linkprofil {
+.link-profil {
   display: grid;
   align-items: center;
   text-align: end;
