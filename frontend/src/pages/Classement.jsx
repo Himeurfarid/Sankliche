@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import "../styles/Classement.css";
 
 function Challenges() {
+  const [isActive, setIsActive] = useState();
+
+  function handleClickActive() {
+    setIsActive(!isActive);
+  }
   return (
     <div>
       <Header />
@@ -12,11 +18,20 @@ function Challenges() {
         <div className="container-mode">
           <div className="header-rank">
             <Link to="/classement">
-              <div className="title-classement">Joueurs</div>
+              <div className={isActive ? "title-classement" : "active"}>
+                Joueurs
+              </div>
             </Link>
-            <Link to="team">
-              <div className="title-classement"> Equipes </div>
-            </Link>
+            <button
+              id="active"
+              type="button"
+              onClick={handleClickActive}
+              label="team"
+            >
+              <Link to="team">
+                <div className="title-classement">Equipes</div>
+              </Link>
+            </button>
           </div>
         </div>
         <div className="container-player-team">
