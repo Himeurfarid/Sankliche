@@ -4,13 +4,13 @@ a {
 button {
   all: unset;
 }
-.listcardchallenge {
+.list-card-challenge {
   display: flex;
   flex-direction: column;
   gap: 5px;
   margin: 2rem 0rem 0rem 0rem;
 }
-.challengescard {
+.challenges-card {
   display: grid;
   grid-template-columns: 50fr 1fr;
   padding: 0.5rem;
@@ -20,50 +20,50 @@ button {
   box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
     -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
 }
-.challengescard:active {
+.challenges-card:active {
   transform: scale(0.9, 0.9);
   box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
     -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
 }
-.titleandlevelchallenges {
+.title-and-level-challenges {
   display: grid;
   grid-template-rows: 2fr 1fr;
 }
-.timeandpointchallenges {
+.time-and-point-challenges {
   display: grid;
   text-align: center;
 }
-.titlechallenge {
+.title-challenge {
   margin: 0;
   font-size: 15px;
 }
-.levelchallenge {
+.level-challenge {
   font-size: 10px;
   margin: 0;
 }
-.descriptionchallenge {
+.description-challenge {
   font-size: 10px;
   margin: 0;
 }
-.timechallenge {
+.time-challenge {
   font-size: 10px;
   margin: 0;
 }
-.logotime {
+.logo-time {
   width: 15px;
   height: 15px;
 }
-.logoandtime {
+.logo-and-time {
   display: grid;
   grid-template-columns: 20px 40px;
   justify-content: center;
   align-items: center;
 }
-.scorechallenge {
+.score-challenge {
   font-size: 15px;
   font-weight: bold;
   margin: 0;
 }
-.buttoncard {
+.button-card {
   all: unset;
 }

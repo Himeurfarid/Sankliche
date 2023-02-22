@@ -9,25 +9,25 @@ function Footer() {
   return (
     <div className="footer">
       <Link to="/">
-        <button className="buttonnav" type="button">
+        <button className="button-nav" type="button">
           <img src={home} alt="home" className="home" />
         </button>
       </Link>
 
       <Link to="/challenges">
-        <button className="buttonnav" type="button">
+        <button className="button-nav" type="button">
           <img src={target} alt="target" className="target" />
         </button>
       </Link>
 
       <Link to="/classement">
-        <button className="buttonnav" type="button">
+        <button className="button-nav" type="button">
           <img src={classement} alt="classement" className="classement" />
         </button>
       </Link>
 
       <Link to="/tips">
-        <button className="buttonnav" type="button">
+        <button className="button-nav" type="button">
           <img src={tips} alt="tips" className="tips" />
         </button>
       </Link>

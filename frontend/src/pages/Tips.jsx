@@ -55,8 +55,8 @@ function Tips() {
       </section>
       <section className="content">
         <h2>Contenu pédagogique : La grammaire française</h2>
-        <div className="cardtips-deck">
-          <div className="cardtips">
+        <div className="card-tips-deck">
+          <div className="card-tips">
             <h3>Genres des mots</h3>
             <p>
               Il est important de comprendre le genre des mots en français. Les
@@ -64,7 +64,7 @@ function Tips() {
               et des adjectifs correspondants.
             </p>
           </div>
-          <div className="cardtips">
+          <div className="card-tips">
             <h3>Conjugaison des verbes</h3>
             <p>
               Les verbes en français ont des formes différentes selon le temps,
@@ -72,7 +72,7 @@ function Tips() {
               conjugaison pour communiquer avec précision.
             </p>
           </div>
-          <div className="cardtips">
+          <div className="card-tips">
             <h3>Les pronoms</h3>
             <p>
               Les pronoms en français remplacent les noms et peuvent être sujets

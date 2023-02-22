@@ -2,11 +2,36 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: center;
-  padding: 0.5rem;
+  padding: 0.5rem 0.5rem 0rem 0.5rem;
+  margin: 0rem 0.5rem 0rem 0.5rem;
+  border-radius: 0.2rem 0.2rem 0rem 0rem;
+  background-color: rgb(169, 175, 184);
+  color: white;
 }
-.ranking {
+.header-rank-title {
+  padding: 0.5rem 0rem 0rem 0rem;
   width: 100%;
-  padding: 0rem 0rem 3rem 0rem;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.title-classement {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  margin: 0rem 0.5rem 0rem 0.5rem;
+  border-radius: 0.2rem 0.2rem 0rem 0rem;
+  background-color: rgb(54, 96, 159);
+}
+.title-classement:hover {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  margin: 0rem 0.5rem 0rem 0.5rem;
+  border-radius: 0.2rem 0.2rem 0rem 0rem;
+  background-color: rgb(166, 164, 182);
 }
 
 .table {
@@ -16,23 +41,30 @@
   background-color: transparent;
 }
 
-.position,
-.name,
-.score {
+.container-classement {
+  margin: 0.5rem 0.5rem 4rem 0.5rem;
+  padding: 0rem 0rem 2rem 0rem;
+  border-radius: 0.5rem;
+  background-color: rgb(102, 127, 162);
+}
+.container-player-team {
+  margin: 0rem 0.5rem 0rem 0.5rem;
+  background-color: rgb(195, 204, 215);
+}
+.player {
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
   padding: 0.5rem;
-  text-align: left;
-  vertical-align: top;
-  border-top: 1px solid #ccc;
+  margin: 0rem 0.7rem 0rem 0.7rem;
+  border-radius: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-shadow: 5px 5px 15px 7px rgba(0, 0, 0, 0),
+    -5px -5px 15px 7px rgba(0, 0, 0, 0.1);
 }
-
-.position {
-  width: 10%;
-}
-
-.name {
-  width: 50%;
-}
-
-.score {
-  width: 40%;
+.body-player {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 1rem 0rem 1rem 0rem;
 }
