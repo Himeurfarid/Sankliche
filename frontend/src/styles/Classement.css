@@ -9,7 +9,7 @@
   color: white;
 }
 .header-rank-title {
-  padding: 0.5rem 0rem 0rem 0rem;
+  padding: 0.5rem 0rem 0.5rem 0rem;
   width: 100%;
   text-align: center;
   font-size: 2rem;
@@ -20,7 +20,7 @@
 .title-classement {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1rem;
-  padding: 0.5rem 0.5rem 1rem 0.5rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   margin: 0rem 0.5rem 0rem 0.5rem;
   border-radius: 0.2rem 0.2rem 0rem 0rem;
   background-color: rgb(54, 96, 159);
@@ -42,10 +42,9 @@
 }
 
 .container-classement {
-  margin: 0.5rem 0.5rem 4rem 0.5rem;
-  padding: 0rem 0rem 2rem 0rem;
-  border-radius: 0.5rem;
-  background-color: rgb(102, 127, 162);
+  margin: 0rem 0rem 3rem 0rem;
+  padding: 0rem 0rem 1rem 0rem;
+  background-color: rgb(119, 147, 186);
 }
 .container-player-team {
   margin: 0rem 0.5rem 0rem 0.5rem;
