@@ -193,7 +193,6 @@ function Challenges() {
           </div>
         </div>
       </div>
-
       <Footer />
     </div>
   );

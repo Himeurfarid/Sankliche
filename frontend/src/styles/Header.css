@@ -8,10 +8,9 @@
   max-width: 3rem;
 }
 .button-profil {
-  background-color: white;
-  border: none;
-  margin: 0;
-  padding: 0;
+  background-color: rgba(128, 128, 128, 0.225);
+  border-radius: 5rem;
+  padding: 0.25rem;
 }
 .link-profil {
   display: grid;
@@ -19,6 +18,6 @@
   text-align: end;
 }
 .profil {
-  width: 27px;
-  height: 27px;
+  width: 24px;
+  height: 24px;
 }
