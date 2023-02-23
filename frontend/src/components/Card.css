@@ -1,6 +1,9 @@
 .card {
-  border: solid;
-  border-radius: 20px;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
 }
 
 .text {
