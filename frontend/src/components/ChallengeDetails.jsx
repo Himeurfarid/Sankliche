@@ -31,6 +31,7 @@ function ChallengeDetails() {
         <p>{challengeById.points}</p>
         <p>{challengeById.time_challenge}</p>
         <p>{challengeById.level_challenge}</p>
+        <p>{challengeById.collaboration}</p>
         <p>{challengeById.tips}</p>
         <p>{challengeById.category}</p>
       </div>

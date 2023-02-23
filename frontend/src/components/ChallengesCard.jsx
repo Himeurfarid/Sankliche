@@ -2,7 +2,13 @@ import PropTypes from "prop-types";
 import "./ChallengesCard.css";
 import time from "../assets/time.png";
 
-function Challenge({ title, points, timechallenge, levelchallenge }) {
+function Challenge({
+  title,
+  points,
+  timechallenge,
+  levelchallenge,
+  collaboration,
+}) {
   return (
     <button type="button" className="challenges-card">
       <div className="title-and-level-challenges">
@@ -15,6 +21,9 @@ function Challenge({ title, points, timechallenge, levelchallenge }) {
           <img className="logo-time" src={time} alt="time" />
           <p className="time-challenge">{timechallenge}</p>
         </div>
+        <div className="collaboration">
+          <p>{collaboration}</p>
+        </div>
       </div>
     </button>
   );
@@ -24,6 +33,7 @@ Challenge.propTypes = {
   points: PropTypes.string.isRequired,
   timechallenge: PropTypes.string.isRequired,
   levelchallenge: PropTypes.string.isRequired,
+  collaboration: PropTypes.string.isRequired,
 };
 
 export default Challenge;
