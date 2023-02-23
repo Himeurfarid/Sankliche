@@ -5,6 +5,7 @@
 html,
 body {
   height: 100%;
+  z-index: -1;
 }
 
 .footer {
@@ -16,22 +17,32 @@ body {
   right: 0;
   background-color: #de5021;
   max-height: 4rem;
-  padding: 0.7rem;
+  padding: 1rem;
 }
 
 .home {
-  max-width: 27px;
+  max-width: 30px;
 }
 .target {
-  max-width: 27px;
+  max-width: 30px;
 }
 .classement {
-  max-width: 27px;
+  max-width: 30px;
 }
 .tips {
-  max-width: 27px;
+  max-width: 30px;
 }
 .buttonnav {
   border: none;
   background-color: #de5021;
+  position: relative;
+  cursor: pointer;
+  margin: 4px 2px;
+}
+
+.buttonnav :hover {
+  box-shadow: 0 2px black;
+  transform: translateY(2px);
+  background-color: #de5021;
+  border: none;
 }
