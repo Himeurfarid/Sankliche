@@ -34,7 +34,9 @@ function ChallengeDetails() {
         <p>{challengeById.tips}</p>
         <p>{challengeById.category}</p>
       </div>
-      <div className="challengevalidation">Faire le défi</div>
+      <div className="container-validation">
+        <div className="challengevalidation">Faire le défi</div>
+      </div>
     </div>
   );
 }

@@ -39,7 +39,6 @@ function Footer() {
           <img src={homeIcon} alt="home" className="home" />
         </button>
       </Link>
-
       <Link to="/challenges">
         <button
           className="button-nav"
@@ -59,7 +58,6 @@ function Footer() {
           <img src={classementIcon} alt="classement" className="classement" />
         </button>
       </Link>
-
       <Link to="/tips">
         <button className="button-nav" type="button" onClick={handleTipsClick}>
           <img src={tipsIcon} alt="tips" className="tips" />
