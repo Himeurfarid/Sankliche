@@ -1,0 +1,23 @@
+.challengecard {
+  height: 100vh;
+  display: grid;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.challenge {
+  display: grid;
+  padding: 0rem 2rem 2rem 2rem;
+}
+
+.imagechallenge {
+  max-width: 100vw;
+}
+
+.challengevalidation {
+  display: grid;
+  align-items: center;
+  border-radius: 4rem;
+  background-color: rgba(128, 128, 128, 0.278);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}

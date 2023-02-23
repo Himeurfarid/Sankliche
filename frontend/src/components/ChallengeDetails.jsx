@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import "../styles/ChallengesDetails.css";
+import imagechallenge from "../assets/imagedefi.png";
 
 function ChallengeDetails() {
   const { id } = useParams();
@@ -17,14 +19,22 @@ function ChallengeDetails() {
   }
 
   return (
-    <div>
-      <h2>{challengeById.title}</h2>
-      <p>{challengeById.points}</p>
-      <p>{challengeById.time_challenge}</p>
-      <p>{challengeById.level_challenge}</p>
-      <p>{challengeById.description_challenge}</p>
-      <p>{challengeById.tips}</p>
-      <p>{challengeById.category}</p>
+    <div className="challengecard">
+      <img
+        className="imagechallenge"
+        src={imagechallenge}
+        alt="imagechallenge"
+      />
+      <div className="challenge">
+        <h2>{challengeById.title}</h2>
+        <p>{challengeById.description_challenge}</p>
+        <p>{challengeById.points}</p>
+        <p>{challengeById.time_challenge}</p>
+        <p>{challengeById.level_challenge}</p>
+        <p>{challengeById.tips}</p>
+        <p>{challengeById.category}</p>
+      </div>
+      <div className="challengevalidation">Faire le défi</div>
     </div>
   );
 }
