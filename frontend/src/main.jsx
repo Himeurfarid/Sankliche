@@ -6,6 +6,7 @@ import Challenges from "./pages/Challenges";
 import Profil from "./pages/Profil";
 import Tips from "./pages/Tips";
 import Classement from "./pages/Classement";
+import ClassementTeam from "./pages/ClassementTeam";
 import ChallengeDetails from "./components/ChallengeDetails";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -19,6 +20,7 @@ root.render(
         <Route exact path="/challenge/:id" element={<ChallengeDetails />} />
         <Route path="/profil" element={<Profil />} />
         <Route path="/classement" element={<Classement />} />
+        <Route path="/classement/team" element={<ClassementTeam />} />
         <Route path="/tips" element={<Tips />} />
       </Routes>
     </BrowserRouter>

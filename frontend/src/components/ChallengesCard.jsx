@@ -4,16 +4,16 @@ import time from "../assets/time.png";
 
 function Challenge({ title, points, timechallenge, levelchallenge }) {
   return (
-    <button type="button" className="challengescard">
-      <div className="titleandlevelchallenges">
-        <h1 className="titlechallenge">{title}</h1>
-        <p className="levelchallenge">{levelchallenge}</p>
+    <button type="button" className="challenges-card">
+      <div className="title-and-level-challenges">
+        <h1 className="title-challenge">{title}</h1>
+        <p className="level-challenge">{levelchallenge}</p>
       </div>
-      <div className="timeandpointchallenges">
-        <p className="scorechallenge"> + {points}pts</p>
-        <div className="logoandtime">
-          <img className="logotime" src={time} alt="time" />
-          <p className="timechallenge">{timechallenge}</p>
+      <div className="time-and-point-challenges">
+        <p className="score-challenge"> + {points}pts</p>
+        <div className="logo-and-time">
+          <img className="logo-time" src={time} alt="time" />
+          <p className="time-challenge">{timechallenge}</p>
         </div>
       </div>
     </button>
