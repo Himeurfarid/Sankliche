@@ -20,3 +20,16 @@ CREATE TABLE challenge (
 INSERT INTO challenge (title, level_challenge, collaboration, description_challenge, points, time_challenge, tips, category)
 VALUES ('Miam-Miam !',"A1 - Facile", 'Solo', 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', "2", "10 min",'Lorem ipsum dolor sit amet.', "Restaurant"), 
        ('Visite la ville !',"B2 - Moyen", 'Equipe', 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', "5", "30 min",'Lorem ipsum dolor sit amet.', "Ville");
+
+CREATE TABLE user (
+  id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  lastname VARCHAR(200) NOT NULL,
+  firstname VARCHAR(100) NOT NULL,
+  nickname VARCHAR(10) NOT NULL,
+  email VARCHAR(900) NOT NULL,
+  hashedPassword VARCHAR(100) NOT NULL,
+  role VARCHAR(15) NOT NULL DEFAULT 'visitor'
+) engine = InnoDB default charset = latin1;
+
+INSERT INTO user(lastname, firstname, nickname, email, hashedPassword, role)
+VALUES ('Froissart','Lucie','Lulu','lulu@gmail.com','visitor')
