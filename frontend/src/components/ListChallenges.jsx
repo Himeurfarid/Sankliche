@@ -14,6 +14,7 @@ function ListChallenges({ challenges }) {
               points={challenge.points}
               timechallenge={challenge.time_challenge}
               levelchallenge={challenge.level_challenge}
+              collaboration={challenge.collaboration}
               key={challenge.id}
             />
           </Link>
@@ -30,6 +31,7 @@ ListChallenges.propTypes = {
       points: PropTypes.string.isRequired,
       time_challenge: PropTypes.string.isRequired,
       level_challenge: PropTypes.string.isRequired,
+      collaboration: PropTypes.string.isRequired,
     }).isRequired
   ).isRequired,
 };

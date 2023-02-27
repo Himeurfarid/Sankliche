@@ -7,7 +7,7 @@ class UserManager extends AbstractManager {
 
   insert(user) {
     return this.connection.query(
-      `insert into ${this.table} (lastname, firstname, username, hashedPassword, email) values (?, ?, ?, ?, ?)`,
+      `insert into ${this.table} (lastname, firstname, username, email, hashedPassword) values (?, ?, ?, ?, ?)`,
       [
         user.lastname,
         user.firstname,
@@ -21,7 +21,7 @@ class UserManager extends AbstractManager {
 
   update(user) {
     return this.connection.query(
-      `update ${this.table} set lastname = ?, firstname = ?, username = ?, hashedPassword = ?, email = ? where id = ?`,
+      `update ${this.table} set lastname = ?, firstname = ?, username = ?, email = ?, hashedPassword = ? where id = ?`,
       [
         user.lastname,
         user.firstname,

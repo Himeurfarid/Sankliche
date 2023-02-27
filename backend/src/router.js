@@ -28,7 +28,7 @@ router.get("/users/:id", userControllers.getOneUser);
 router.post("users", userControllers.addUser);
 router.post("users/:id", userControllers.addUser);
 
-router.update("users", userControllers.editUser);
-router.update("users/:id", userControllers.editUser);
+router.put("users", userControllers.editUser);
+router.put("users/:id", userControllers.editUser);
 
 module.exports = router;
