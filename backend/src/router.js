@@ -20,4 +20,9 @@ const categoryControllers = require("./controllers/categoryControllers");
 router.get("/categories", categoryControllers.getCategory);
 router.get("/categories/:id", categoryControllers.getOneCategory);
 
+const userControllers = require("./controllers/userControllers");
+
+router.get("/users", userControllers.getUsers);
+router.get("/users/:id", userControllers.getOneUser);
+
 module.exports = router;

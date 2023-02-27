@@ -29,4 +29,7 @@ CREATE TABLE user (
   email VARCHAR(900) NOT NULL,
   hashedPassword VARCHAR(100) NOT NULL,
   role VARCHAR(15) NOT NULL DEFAULT 'visitor'
-) engine = InnoDB default charset = utf8mb4;       
+) engine = InnoDB default charset = latin1;
+
+INSERT INTO user(lastname, firstname, nickname, email, hashedPassword, role)
+VALUES ('Froissart','Lucie','Lulu','lulu@gmail.com','visitor')
