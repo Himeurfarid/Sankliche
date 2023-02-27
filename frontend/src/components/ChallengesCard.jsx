@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "./ChallengesCard.css";
+import "../styles/ChallengesCard.css";
 import time from "../assets/time.png";
 
 function Challenge({
