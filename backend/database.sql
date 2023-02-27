@@ -25,11 +25,11 @@ CREATE TABLE user (
   id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   lastname VARCHAR(200) NOT NULL,
   firstname VARCHAR(100) NOT NULL,
-  nickname VARCHAR(10) NOT NULL,
+  username VARCHAR(10) NOT NULL,
   email VARCHAR(900) NOT NULL,
   hashedPassword VARCHAR(100) NOT NULL,
   role VARCHAR(15) NOT NULL DEFAULT 'visitor'
 ) engine = InnoDB default charset = latin1;
 
-INSERT INTO user(lastname, firstname, nickname, email, hashedPassword, role)
+INSERT INTO user(lastname, firstname, username, email, hashedPassword, role)
 VALUES ('Froissart','Lucie','Lulu','lulu@gmail.com','visitor')
