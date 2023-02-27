@@ -27,9 +27,8 @@ CREATE TABLE user (
   firstname VARCHAR(100) NOT NULL,
   username VARCHAR(10) NOT NULL,
   email VARCHAR(900) NOT NULL,
-  hashedPassword VARCHAR(100) NOT NULL,
-  role VARCHAR(15) NOT NULL DEFAULT 'visitor'
+  hashedPassword VARCHAR(100) NOT NULL
 ) engine = InnoDB default charset = latin1;
 
-INSERT INTO user(lastname, firstname, username, email, hashedPassword, role)
-VALUES ('Froissart','Lucie','Lulu','lulu@gmail.com','visitor')
+INSERT INTO user (lastname, firstname, username, email, hashedPassword)
+VALUES ('Froissart','Lucie','Lulu','lulu@gmail.com','123456789')
