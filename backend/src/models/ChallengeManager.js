@@ -7,10 +7,11 @@ class ChallengeManager extends AbstractManager {
 
   insert(challenge) {
     return this.connection.query(
-      `insert into ${this.table} (title, level_challenge, description_challenge, points, time_challenge, tips, category_id) values (?, ?, ?, ?, ?, ?)`,
+      `insert into ${this.table} (title, level_challenge, collaboration, description_challenge, points, time_challenge, tips, category_id) values (?, ?, ?, ?, ?, ?, ?, ?)`,
       [
         challenge.title,
         challenge.level_challenge,
+        challenge.collaboration,
         challenge.description_challenge,
         challenge.points,
         challenge.time_challenge,
@@ -22,10 +23,11 @@ class ChallengeManager extends AbstractManager {
 
   update(challenge) {
     return this.connection.query(
-      `update ${this.table} set title = ?, level_challenge = ?, description_challenge = ?, points = ?, tips = ?, category_id = ? where id = ?`,
+      `update ${this.table} set title = ?, level_challenge = ?, collaboration = ?, description_challenge = ?, points = ?, time_challenge = ?, tips = ?, category_id = ? where id = ?`,
       [
         challenge.title,
         challenge.level_challenge,
+        challenge.collaboration,
         challenge.description_challenge,
         challenge.points,
         challenge.time_challenge,
