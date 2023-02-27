@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import "./ChallengesCard.css";
+import "../styles/ChallengesCard.css";
 import ChallengesCard from "./ChallengesCard";
 
 function ListChallenges({ challenges }) {
