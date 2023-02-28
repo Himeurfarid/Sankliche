@@ -36,7 +36,7 @@ function Header() {
               type="button"
               onClick={togglePopup}
             >
-              Fermer
+              Déconnexion
             </button>
           </div>
         )}
