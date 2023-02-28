@@ -26,8 +26,16 @@ function Header() {
         </button>
         {showPopup && (
           <div className="popup">
-            <p>Ceci est le popup</p>
-            <button className="close-popup" type="button" onClick={togglePopup}>
+            <Link to="/profil">
+              <button className="button-popup" type="button">
+                Profil
+              </button>
+            </Link>
+            <button
+              className="button-popup"
+              type="button"
+              onClick={togglePopup}
+            >
               Fermer
             </button>
           </div>
