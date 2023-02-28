@@ -1,9 +1,16 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import profil from "../assets/profil.png";
 
 import "../styles/Header.css";
 
 function Header() {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+  };
+
   return (
     <div className="header-app">
       <Link to="/">
@@ -14,11 +21,17 @@ function Header() {
         />
       </Link>
       <div className="link-profil">
-        <Link to="/profil">
-          <button className="button-profil" type="button">
-            <img src={profil} alt="profil" className="profil" />
-          </button>
-        </Link>
+        <button className="button-profil" type="button" onClick={togglePopup}>
+          <img src={profil} alt="profil" className="profil" />
+        </button>
+        {showPopup && (
+          <div className="popup">
+            <p>Ceci est le popup</p>
+            <button className="close-popup" type="button" onClick={togglePopup}>
+              Fermer
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
