@@ -55,3 +55,82 @@ a {
   text-align: center;
   color: rgba(128, 128, 128, 0.674);
 }
+.button-nav-not-home {
+  background-color: white;
+  border: none;
+  background-image: url("../assets/home.png");
+  min-height: 26px;
+  min-width: 30px;
+  background-size: 100%;
+  align-self: flex-start;
+}
+
+.button-nav-home {
+  background-color: white;
+  border: none;
+  min-height: 26px;
+  min-width: 30px;
+  background-image: url("../assets/home2.png");
+  background-size: 100%;
+  align-self: flex-start;
+}
+
+.button-nav-not-target {
+  background-color: white;
+  border: none;
+  background-image: url("../assets/target.png");
+  min-height: 26px;
+  min-width: 30px;
+  background-size: 100%;
+  align-self: flex-start;
+}
+
+.button-nav-target {
+  background-color: white;
+  border: none;
+  min-height: 26px;
+  min-width: 30px;
+  background-image: url("../assets/target2.png");
+  background-size: 100%;
+  align-self: flex-start;
+}
+
+.button-nav-not-classement {
+  background-color: white;
+  border: none;
+  background-image: url("../assets/classement.png");
+  min-height: 26px;
+  min-width: 30px;
+  background-size: 100%;
+  align-self: flex-start;
+}
+
+.button-nav-classement {
+  background-color: white;
+  border: none;
+  min-height: 26px;
+  min-width: 30px;
+  background-image: url("../assets/classement2.png");
+  background-size: 100%;
+  align-self: flex-start;
+}
+
+.button-nav-not-tips {
+  background-color: white;
+  border: none;
+  background-image: url("../assets/tips.png");
+  min-height: 26px;
+  min-width: 30px;
+  background-size: 100%;
+  align-self: flex-start;
+}
+
+.button-nav-tips {
+  background-color: white;
+  border: none;
+  min-height: 26px;
+  min-width: 30px;
+  background-image: url("../assets/tips2.png");
+  background-size: 100%;
+  align-self: flex-start;
+}
