@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
-import home from "../assets/home.png";
+import home from "../assets/acceuil.png";
 import home2 from "../assets/home2.png";
 import target from "../assets/target.png";
 import target2 from "../assets/target2.png";
@@ -34,35 +34,34 @@ function Footer() {
 
   return (
     <div className="footer">
-      <Link to="/">
-        <button className="button-nav" type="button" onClick={handleHomeClick}>
-          <img src={homeIcon} alt="home" className="home" />
-        </button>
-      </Link>
-      <Link to="/challenges">
-        <button
-          className="button-nav"
-          type="button"
-          onClick={handleTargetClick}
-        >
+      <button className="button-nav" type="button" onClick={handleHomeClick}>
+        <Link to="/">
+          <img src={homeIcon} alt="home" className="home-is-active" />
+          <p>Acceuil</p>
+        </Link>
+      </button>
+      <button className="button-nav" type="button" onClick={handleTargetClick}>
+        <Link to="/challenges">
           <img src={targetIcon} alt="target" className="target" />
-        </button>
-      </Link>
-
-      <Link to="/classement">
-        <button
-          className="button-nav"
-          type="button"
-          onClick={handleClassementClick}
-        >
+          <p>Défis</p>
+        </Link>
+      </button>
+      <button
+        className="button-nav"
+        type="button"
+        onClick={handleClassementClick}
+      >
+        <Link to="/classement">
           <img src={classementIcon} alt="classement" className="classement" />
-        </button>
-      </Link>
-      <Link to="/tips">
-        <button className="button-nav" type="button" onClick={handleTipsClick}>
+          <p>Classement</p>
+        </Link>
+      </button>
+      <button className="button-nav" type="button" onClick={handleTipsClick}>
+        <Link to="/tips">
           <img src={tipsIcon} alt="tips" className="tips" />
-        </button>
-      </Link>
+          <p>Astuces</p>
+        </Link>
+      </button>
     </div>
   );
 }
