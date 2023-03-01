@@ -18,7 +18,7 @@ a {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 0rem 0rem 1rem 0rem;
+  padding: 0.2rem 0rem 0.2rem 0rem;
   background-color: white;
   cursor: pointer;
   font-size: 12px;
@@ -43,35 +43,47 @@ a {
 }
 
 .button-nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
   cursor: pointer;
   min-height: 3rem;
-  padding: 0rem 0rem 0rem 0rem;
-  align-items: center;
-  text-align: center;
   color: #de5021;
 }
 
 .button-nav-not {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
   cursor: pointer;
   min-height: 3rem;
-  text-align: center;
   color: rgba(128, 128, 128, 0.674);
 }
 .button-nav-not-home {
   background-color: white;
   border: none;
   background-image: url("../assets/home.png");
-  min-height: 26px;
-  min-width: 30px;
+  height: 26px;
+  width: 30px;
   background-size: 100%;
   align-self: flex-start;
 }
-
+.button-link {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  cursor: pointer;
+  min-height: 3rem;
+  color: #de5021;
+}
+.active {
+  background-color: #de5021;
+}
 .button-nav-home {
   background-color: white;
   border: none;
-  min-height: 26px;
-  min-width: 30px;
+  height: 26px;
+  width: 30px;
   background-image: url("../assets/home2.png");
   background-size: 100%;
   align-self: flex-start;
@@ -81,8 +93,8 @@ a {
   background-color: white;
   border: none;
   background-image: url("../assets/target.png");
-  min-height: 26px;
-  min-width: 30px;
+  height: 26px;
+  width: 30px;
   background-size: 100%;
   align-self: flex-start;
 }
@@ -90,8 +102,8 @@ a {
 .button-nav-target {
   background-color: white;
   border: none;
-  min-height: 26px;
-  min-width: 30px;
+  height: 26px;
+  width: 30px;
   background-image: url("../assets/target2.png");
   background-size: 100%;
   align-self: flex-start;
@@ -101,8 +113,8 @@ a {
   background-color: white;
   border: none;
   background-image: url("../assets/classement.png");
-  min-height: 26px;
-  min-width: 30px;
+  height: 26px;
+  width: 30px;
   background-size: 100%;
   align-self: flex-start;
 }
@@ -110,8 +122,8 @@ a {
 .button-nav-classement {
   background-color: white;
   border: none;
-  min-height: 26px;
-  min-width: 30px;
+  height: 26px;
+  width: 30px;
   background-image: url("../assets/classement2.png");
   background-size: 100%;
   align-self: flex-start;
@@ -121,8 +133,8 @@ a {
   background-color: white;
   border: none;
   background-image: url("../assets/tips.png");
-  min-height: 26px;
-  min-width: 30px;
+  height: 26px;
+  width: 30px;
   background-size: 100%;
   align-self: flex-start;
 }
@@ -130,8 +142,8 @@ a {
 .button-nav-tips {
   background-color: white;
   border: none;
-  min-height: 26px;
-  min-width: 30px;
+  height: 26px;
+  width: 30px;
   background-image: url("../assets/tips2.png");
   background-size: 100%;
   align-self: flex-start;
