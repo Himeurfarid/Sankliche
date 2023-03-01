@@ -1,77 +1,48 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "../styles/Footer.css";
 
 function Footer() {
-  const [activeNavItem, setActiveNavItem] = useState("home");
-
-  const handleNavItemClick = (itemId) => {
-    setActiveNavItem(itemId);
-  };
-
+  const [activeTab, setActiveTab] = useState("home");
+  function handleTabClick() {
+    setActiveTab(activeTab);
+  }
   return (
     <div className="footer">
-      <button
-        type="button"
-        className={activeNavItem === "home" ? "button-nav" : "button-nav-not"}
-        onClick={() => handleNavItemClick("home")}
-      >
-        <div
-          type="button"
-          className={
-            activeNavItem === "home" ? "button-nav-not-home" : "button-nav-home"
-          }
-        />
-        Accueil
-      </button>
-      <button
-        type="button"
-        className={activeNavItem === "target" ? "button-nav" : "button-nav-not"}
-        onClick={() => handleNavItemClick("target")}
-      >
-        <div
-          type="button"
-          className={
-            activeNavItem === "target"
-              ? "button-nav-not-target"
-              : "button-nav-target"
-          }
-        />
-        <p>Défis</p>
-      </button>
-      <button
-        type="button"
-        className={
-          activeNavItem === "classement" ? "button-nav" : "button-nav-not"
-        }
-        onClick={() => handleNavItemClick("classement")}
-      >
-        <div
-          type="button"
-          className={
-            activeNavItem === "classement"
-              ? "button-nav-not-classement"
-              : "button-nav-classement"
-          }
-        />
-        <p>Classement</p>
-      </button>
-      <button
-        type="button"
-        className={
-          activeNavItem === "button-tips" ? "button-nav" : "button-nav-not"
-        }
-        onClick={() => handleNavItemClick("button-tips")}
-      >
-        <div
-          type="button"
-          className={
-            activeNavItem === "button-tips"
-              ? "button-nav-not-tips"
-              : "button-nav-tips"
-          }
-        />
-        <p>Défis</p>
-      </button>
+      <nav className="navbar">
+        <NavLink
+          to="/"
+          activeclassname="active"
+          onClick={() => handleTabClick("home")}
+          className="nav-link"
+        >
+          <p className="home-link">Acceuil</p>
+        </NavLink>
+        <NavLink
+          to="/challenges"
+          activeclassname="active"
+          onClick={() => handleTabClick("defis")}
+          className="nav-link-defis"
+        >
+          <p className="defis-link">Défis</p>
+        </NavLink>
+        <NavLink
+          to="/classement"
+          activeclassname="active"
+          onClick={() => handleTabClick("classement")}
+          className="nav-link-classement"
+        >
+          <p className="classement-link">Classement</p>
+        </NavLink>
+        <NavLink
+          to="/tips"
+          activeclassname="active"
+          onClick={() => handleTabClick("tips")}
+          className="nav-link-tips"
+        >
+          <p className="tips-link">Astuces</p>
+        </NavLink>
+      </nav>
     </div>
   );
 }

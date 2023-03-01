@@ -10,16 +10,14 @@ body {
 a {
   all: unset;
 }
+
 .footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 0.2rem 0rem 0.2rem 0rem;
   background-color: white;
+  padding: 0rem 0rem 1rem 0rem;
   cursor: pointer;
   font-size: 12px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -42,107 +40,100 @@ a {
   max-width: 24px;
 }
 
-.button-nav {
+.navbar {
   display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  cursor: pointer;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   min-height: 3rem;
-  color: #de5021;
+  text-align: center;
 }
-
-.button-nav-not {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  cursor: pointer;
-  min-height: 3rem;
-  color: rgba(128, 128, 128, 0.674);
-}
-.button-nav-not-home {
-  background-color: white;
-  border: none;
-  background-image: url("../assets/home.png");
-  height: 26px;
-  width: 30px;
-  background-size: 100%;
-  align-self: flex-start;
-}
-.button-link {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-items: center;
-  cursor: pointer;
-  min-height: 3rem;
-  color: #de5021;
-}
-
-.button-nav-home {
-  background-color: white;
-  border: none;
-  height: 26px;
-  width: 30px;
+.nav-link {
+  color: grey;
+  text-decoration: none;
   background-image: url("../assets/home2.png");
-  background-size: 100%;
-  align-self: flex-start;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30px;
 }
 
-.button-nav-not-target {
-  background-color: white;
-  border: none;
-  background-image: url("../assets/target.png");
-  height: 26px;
-  width: 30px;
-  background-size: 100%;
-  align-self: flex-start;
+.nav-link.active {
+  color: #de5021;
+  background-image: url("../assets/home.png");
 }
 
-.button-nav-target {
-  background-color: white;
-  border: none;
-  height: 26px;
-  width: 30px;
+.nav-link-defis {
+  color: grey;
+  text-decoration: none;
   background-image: url("../assets/target2.png");
-  background-size: 100%;
-  align-self: flex-start;
+  background-size: 30px;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
-.button-nav-not-classement {
-  background-color: white;
-  border: none;
-  background-image: url("../assets/classement.png");
-  height: 26px;
-  width: 30px;
-  background-size: 100%;
-  align-self: flex-start;
+.nav-link-defis.active {
+  color: #de5021;
+  background-image: url("../assets/target.png");
 }
 
-.button-nav-classement {
-  background-color: white;
-  border: none;
-  height: 26px;
-  width: 30px;
+.nav-link-classement {
+  color: grey;
+  text-decoration: none;
   background-image: url("../assets/classement2.png");
-  background-size: 100%;
-  align-self: flex-start;
+  background-size: 22px;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
-.button-nav-not-tips {
-  background-color: white;
-  border: none;
-  background-image: url("../assets/tips.png");
-  height: 26px;
-  width: 30px;
-  background-size: 100%;
-  align-self: flex-start;
+.nav-link-classement.active {
+  color: #de5021;
+  background-image: url("../assets/classement.png");
 }
 
-.button-nav-tips {
-  background-color: white;
-  border: none;
-  height: 26px;
-  width: 30px;
+.nav-link-tips {
+  color: grey;
+  text-decoration: none;
   background-image: url("../assets/tips2.png");
-  background-size: 100%;
-  align-self: flex-start;
+  background-size: 36px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.nav-link-tips.active {
+  color: #de5021;
+  background-image: url("../assets/tips.png");
+}
+
+.defis-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 3rem;
+  text-align: center;
+  min-width: 25vw;
+}
+
+.home-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 3rem;
+  text-align: center;
+  min-width: 25vw;
+}
+
+.classement-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 3rem;
+  text-align: center;
+  min-width: 25vw;
+}
+
+.tips-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 3rem;
+  text-align: center;
+  min-width: 25vw;
 }
