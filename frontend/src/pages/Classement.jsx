@@ -18,7 +18,11 @@ function Challenges() {
         <div className="container-mode">
           <div className="header-rank">
             <Link to="/classement">
-              <div className={isActive ? "title-classement" : "active"}>
+              <div
+                className={
+                  isActive ? "title-classement" : "title-classement-active"
+                }
+              >
                 Joueurs
               </div>
             </Link>
@@ -29,7 +33,13 @@ function Challenges() {
               label="team"
             >
               <Link to="team">
-                <div className="title-classement">Equipes</div>
+                <div
+                  className={
+                    isActive ? ".title-classement-active" : "title-classement"
+                  }
+                >
+                  Equipes
+                </div>
               </Link>
             </button>
           </div>
