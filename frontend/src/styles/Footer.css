@@ -7,39 +7,133 @@ body {
   height: 100%;
 }
 
+a {
+  all: unset;
+}
+
 .footer {
-  display: flex;
-  justify-content: space-around;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #de5021;
-  max-height: 3rem;
-  padding: 0.8rem;
+  background-color: white;
+  padding: 0rem 0rem 1rem 0rem;
   cursor: pointer;
-  overflow: hidden;
+  font-size: 12px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border-top: rgba(128, 128, 128, 0.511) 1px solid;
 }
 
 .home {
-  max-width: 35px;
+  max-width: 24px;
 }
+
 .target {
-  max-width: 35px;
+  max-width: 24px;
 }
+
 .classement {
-  max-width: 35px;
+  max-width: 24px;
 }
+
 .tips {
-  max-width: 35px;
+  max-width: 24px;
 }
-.button-nav {
+
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  min-height: 3rem;
+  text-align: center;
+}
+.nav-link {
+  color: grey;
+  text-decoration: none;
+  background-image: url("../assets/home2.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+}
+
+.nav-link.active {
+  color: #de5021;
+  background-image: url("../assets/home.png");
+}
+
+.nav-link-defis {
+  color: grey;
+  text-decoration: none;
+  background-image: url("../assets/target2.png");
+  background-size: 30px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.nav-link-defis.active {
+  color: #de5021;
+  background-image: url("../assets/target.png");
+}
+
+.nav-link-classement {
+  color: grey;
+  text-decoration: none;
+  background-image: url("../assets/classement2.png");
+  background-size: 22px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.nav-link-classement.active {
+  color: #de5021;
+  background-image: url("../assets/classement.png");
+}
+
+.nav-link-tips {
+  color: grey;
+  text-decoration: none;
+  background-image: url("../assets/tips2.png");
+  background-size: 36px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.nav-link-tips.active {
+  color: #de5021;
+  background-image: url("../assets/tips.png");
+}
+
+.defis-link {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  border: none;
-  background-color: #de5021;
-  position: relative;
-  cursor: pointer;
-  margin: 4px 2px;
+  justify-content: end;
+  height: 3rem;
+  text-align: center;
+  min-width: 25vw;
+}
+
+.home-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 3rem;
+  text-align: center;
+  min-width: 25vw;
+}
+
+.classement-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 3rem;
+  text-align: center;
+  min-width: 25vw;
+}
+
+.tips-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 3rem;
+  text-align: center;
+  min-width: 25vw;
 }
