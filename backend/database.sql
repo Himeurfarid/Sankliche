@@ -37,3 +37,6 @@ CREATE TABLE team (
   id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   team_name VARCHAR(200) NOT NULL,
 ) engine = InnoDB default charset = latin1;
+
+INSERT INTO team (team_name)
+VALUES ('Team Test');
