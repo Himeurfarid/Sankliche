@@ -1,0 +1,29 @@
+.topProfil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.names {
+  display: flex;
+  flex-direction: row;
+}
+
+.styleName {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  padding: 10px;
+}
+
+.surnom {
+  font-size: 1.2em;
+  color: #888;
+}
+
+.picture {
+  width: 50%;
+  margin-bottom: 20px;
+}
