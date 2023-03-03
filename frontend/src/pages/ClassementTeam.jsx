@@ -28,7 +28,11 @@ function Challenges() {
               </Link>
             </button>
             <Link to="/classement/team">
-              <div className={isActiveTeam ? "title-classement" : "active"}>
+              <div
+                className={
+                  isActiveTeam ? "title-classement" : "title-classement-active"
+                }
+              >
                 Equipes
               </div>
             </Link>
