@@ -8,6 +8,8 @@ import Tips from "./pages/Tips";
 import Classement from "./pages/Classement";
 import ClassementTeam from "./pages/ClassementTeam";
 import ChallengeDetails from "./components/ChallengeDetails";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -19,6 +21,8 @@ root.render(
         <Route path="/challenges" element={<Challenges />} />
         <Route exact path="/challenge/:id" element={<ChallengeDetails />} />
         <Route path="/profil" element={<Profil />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/classement" element={<Classement />} />
         <Route path="/classement/team" element={<ClassementTeam />} />
         <Route path="/tips" element={<Tips />} />
