@@ -52,6 +52,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 /* Login form */
 .login-form {
@@ -99,10 +100,19 @@
 
 /* Form button */
 .form-button {
-  background-color: rgba(0, 0, 0, 0.516);
+  background-color: rgba(2, 28, 197, 0.759);
   color: white;
   text-align: center;
-  margin: 0rem 4rem 0rem 4rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  height: 2rem;
+}
+
+.form-button:active {
+  background-color: rgb(2, 28, 197);
+  color: rgb(244, 241, 241);
+  text-align: center;
+  width: 100%;
   border-radius: 0.5rem;
   height: 2rem;
 }

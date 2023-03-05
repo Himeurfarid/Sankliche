@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "../styles/Login.css";
 
 function Login() {
@@ -33,9 +34,11 @@ function Login() {
                 className="form-input"
                 placeholder="Exemple : 123456"
               />
-              <button type="submit" className="form-button">
-                Se connecter
-              </button>
+              <Link className="form-button-link" to="/">
+                <button type="submit" className="form-button">
+                  Se connecter
+                </button>
+              </Link>
               <p className="form-error">Email ou mot de passe incorrect</p>
             </form>
             <div className="form-links">
