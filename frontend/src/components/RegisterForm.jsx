@@ -5,13 +5,26 @@ function RegisterForm() {
   return (
     <form className="form-register">
       <label htmlFor="lastname">Nom</label>
-      <input type="lastname" name="lastname" id="lastname" placeholder="Doe" />
+      <input
+        className="input-sign-up"
+        type="lastname"
+        name="lastname"
+        id="lastname"
+        placeholder="Doe"
+      />
 
       <label htmlFor="fistname">Prénom</label>
-      <input type="fistname" name="fistname" id="fistname" placeholder="John" />
+      <input
+        className="input-sign-up"
+        type="fistname"
+        name="fistname"
+        id="fistname"
+        placeholder="John"
+      />
 
       <label htmlFor="email">Email</label>
       <input
+        className="input-sign-up"
         type="text"
         autoComplete="username"
         name="email"
@@ -22,6 +35,7 @@ function RegisterForm() {
       <label htmlFor="password">Mot de passe</label>
 
       <input
+        className="input-sign-up"
         type="text"
         autoComplete="new-password"
         name="password"
@@ -34,6 +48,7 @@ function RegisterForm() {
       </label>
 
       <input
+        className="input-sign-up"
         type="text"
         autoComplete="new-password"
         name="passwordConfirm"
