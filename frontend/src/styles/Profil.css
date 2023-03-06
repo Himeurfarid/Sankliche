@@ -20,7 +20,7 @@
   font-size: 2em;
   font-weight: bold;
   color: #333;
-  padding: 10px;
+  padding: 30px 10px;
 }
 
 .surnom {
@@ -31,4 +31,8 @@
 .picture {
   width: 50%;
   margin-bottom: 25px;
+}
+
+input {
+  width: 7.5rem;
 }

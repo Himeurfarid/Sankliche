@@ -52,13 +52,18 @@ function Profil() {
             <div className="picture-placeholder">Sélectionner une photo</div>
           )}
         </div>
-        <input type="file" onChange={handlePictureChange} ref={fileInputRef} />
+        <label htmlFor="fileInput">Sélectionner une photo :</label>
+        <input
+          type="file"
+          id="fileInput"
+          onChange={handlePictureChange}
+          ref={fileInputRef}
+        />
 
         <div className="names">
           <h1 className="styleName">Alexis</h1>
           <h2 className="styleName">Durin</h2>
         </div>
-        <h3 className="surnom">Xixis</h3>
       </div>
       <Footer />
     </>
