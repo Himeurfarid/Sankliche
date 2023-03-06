@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  height: 100%;
+}
+.register {
+  display: flex;
+  flex-direction: column;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 2rem 1rem 1rem 1rem;
+}
+
+.title-register {
+  text-align: center;
+  margin: 0;
+}
