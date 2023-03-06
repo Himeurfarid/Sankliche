@@ -54,6 +54,7 @@ function Profil() {
         </div>
         <label htmlFor="fileInput">Sélectionner une photo :</label>
         <input
+          className="input-profile"
           type="file"
           id="fileInput"
           onChange={handlePictureChange}
