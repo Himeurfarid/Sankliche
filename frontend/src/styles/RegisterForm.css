@@ -1,0 +1,12 @@
+.form-register {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-up {
+  text-align: center;
+}
+
+.add-profile-picture {
+  margin: 0;
+}

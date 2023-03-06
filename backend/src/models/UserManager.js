@@ -14,7 +14,6 @@ class UserManager extends AbstractManager {
         user.username,
         user.email,
         user.hashedPassword,
-        user.id,
       ]
     );
   }
