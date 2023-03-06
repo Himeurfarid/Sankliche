@@ -1,9 +1,3 @@
-a {
-  all: unset;
-}
-button {
-  all: unset;
-}
 .list-card-challenge {
   display: flex;
   flex-direction: column;

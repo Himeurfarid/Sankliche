@@ -1,3 +1,9 @@
+a {
+  all: unset;
+}
+button {
+  all: unset;
+}
 .presentation {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
