@@ -1,10 +1,12 @@
 import Card from "../components/Card";
 import "../styles/Home.css";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 export default function Home() {
   return (
     <>
+      <Header />
       <main>
         <div className="section">
           <div className="presentation">Sankliché</div>
