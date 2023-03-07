@@ -1,36 +1,46 @@
 const AbstractManager = require("./AbstractManager");
 
-class UserManager extends AbstractManager {
+class UsersManager extends AbstractManager {
   constructor() {
-    super({ table: "user" });
+    super({ table: "users" });
   }
 
   insert(user) {
     return this.connection.query(
-      `insert into ${this.table} (lastname, firstname, username, email, hashedPassword) values (?, ?, ?, ?, ?)`,
+      `insert into ${this.table} (admin, email, firstname, lastname, login, city, hashedPassword ) values (?, ?, ?, ?, ?, ?, ?)`,
       [
-        user.lastname,
-        user.firstname,
-        user.username,
+        user.admin,
         user.email,
+        user.firstname,
+        user.lastname,
+        user.login,
+        user.city,
         user.hashedPassword,
       ]
     );
   }
 
+  verifyEmailAndPasswordAndNext(email) {
+    return this.connection.query(
+      `select id, firstname, lastname, admin, city, hashedPassword from ${this.table} where email = ?`,
+      [email]
+    );
+  }
+
   update(user) {
     return this.connection.query(
-      `update ${this.table} set lastname = ?, firstname = ?, username = ?, email = ?, hashedPassword = ? where id = ?`,
+      `update ${this.table} set admin = ?, email = ?, firstname = ?, lastname = ?, login = ?, city = ? where id = ?`,
       [
-        user.lastname,
-        user.firstname,
-        user.username,
+        user.admin,
         user.email,
-        user.hashedPassword,
+        user.firstname,
+        user.lastname,
+        user.login,
+        user.city,
         user.id,
       ]
     );
   }
 }
 
-module.exports = UserManager;
+module.exports = UsersManager;

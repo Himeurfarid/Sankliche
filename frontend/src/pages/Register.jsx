@@ -1,15 +1,249 @@
-import ProfilePicture from "../components/ProfilePicture";
-import RegisterForm from "../components/RegisterForm";
-import "../styles/Register.css";
+import { useState, useEffect, useReducer } from "react";
 
-function Register() {
+import PropTypes from "prop-types";
+
+import {
+  emailReducer,
+  passwordReducer,
+  cityReducer,
+  usernameReducer,
+  firstnameReducer,
+  lastnameReducer,
+} from "../../_services/signupHelpers";
+
+import Card from "../../UI/Card";
+import Button from "../../UI/Button";
+
+export default function Signup({ onRes }) {
+  const [formIsValid, setFormIsValid] = useState(false);
+
+  const [emailState, dispatchEmail] = useReducer(emailReducer, {
+    value: "",
+    isValid: null,
+  });
+
+  const [passwordState, dispatchPassword] = useReducer(passwordReducer, {
+    value: "",
+    isValid: null,
+  });
+
+  const [cityState, dispatchCity] = useReducer(cityReducer, {
+    value: "",
+    isValid: null,
+  });
+
+  const [usernameState, dispatchUsername] = useReducer(usernameReducer, {
+    value: "",
+    isValid: null,
+  });
+
+  const [firstnameState, dispatchFirstname] = useReducer(firstnameReducer, {
+    value: "",
+    isValid: null,
+  });
+
+  const [lastnameState, dispatchLastname] = useReducer(lastnameReducer, {
+    value: "",
+    isValid: null,
+  });
+
+  useEffect(() => {
+    const identifier = setTimeout(() => {
+      setFormIsValid(
+        emailState.isValid &&
+          passwordState.isValid &&
+          cityState.isValid &&
+          usernameState.isValid &&
+          firstnameState.isValid &&
+          lastnameState.isValid
+      );
+    }, 500);
+
+    return () => {
+      clearTimeout(identifier);
+    };
+  }, [
+    emailState.isValid,
+    passwordState.isValid,
+    cityState.isValid,
+    usernameState.isValid,
+    firstnameState.isValid,
+    lastnameState.isValid,
+  ]);
+
+  const firstnameChangeHandler = (event) => {
+    dispatchFirstname({ type: "USER_INPUT", val: event.target.value });
+  };
+
+  const lastnameChangeHandler = (event) => {
+    dispatchLastname({ type: "USER_INPUT", val: event.target.value });
+  };
+
+  const usernameChangeHandler = (event) => {
+    dispatchUsername({ type: "USER_INPUT", val: event.target.value });
+  };
+
+  const cityChangeHandler = (event) => {
+    dispatchCity({ type: "USER_INPUT", val: event.target.value });
+  };
+
+  const emailChangeHandler = (event) => {
+    dispatchEmail({ type: "USER_INPUT", val: event.target.value });
+  };
+
+  const passwordChangeHandler = (event) => {
+    dispatchPassword({ type: "USER_INPUT", val: event.target.value });
+  };
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+    const url = import.meta.env.VITE_BACKEND_URL;
+    fetch(`${url}/users`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        admin: false,
+        firstname: firstnameState.value,
+        lastname: lastnameState.value,
+        login: usernameState.value,
+        city: cityState.value,
+        email: emailState.value,
+        password: passwordState.value,
+      }),
+    })
+      .then((res) => onRes(res))
+      .catch((err) => {
+        console.error(err);
+      });
+  };
+
+  const validateFirstnameHandler = () => {
+    dispatchFirstname({ type: "INPUT_BLUR" });
+  };
+
+  const validateLastnameHandler = () => {
+    dispatchLastname({ type: "INPUT_BLUR" });
+  };
+
+  const validateUsernameHandler = () => {
+    dispatchUsername({ type: "INPUT_BLUR" });
+  };
+
+  const validateCityHandler = () => {
+    dispatchCity({ type: "INPUT_BLUR" });
+  };
+
+  const validateEmailHandler = () => {
+    dispatchEmail({ type: "INPUT_BLUR" });
+  };
+
+  const validatePasswordHandler = () => {
+    dispatchPassword({ type: "INPUT_BLUR" });
+  };
+
   return (
-    <div className="register">
-      <h1 className="title-register">Inscription</h1>
-      <ProfilePicture />
-      <RegisterForm />
-    </div>
+    <Card classNames="login">
+      <form onSubmit={submitHandler}>
+        <div
+          className={`${"control"} ${
+            firstnameState.isValid === false ? "invalid" : ""
+          }`}
+        >
+          <label htmlFor="firstname">Prenom</label>
+          <input
+            type="text"
+            id="firstname"
+            value={firstnameState.value}
+            onChange={firstnameChangeHandler}
+            onBlur={validateFirstnameHandler}
+          />
+        </div>
+        <div
+          className={`${"control"} ${
+            lastnameState.isValid === false ? "invalid" : ""
+          }`}
+        >
+          <label htmlFor="lastname">Nom</label>
+          <input
+            type="text"
+            id="lastname"
+            value={lastnameState.value}
+            onChange={lastnameChangeHandler}
+            onBlur={validateLastnameHandler}
+          />
+        </div>
+        <div
+          className={`${"control"} ${
+            usernameState.isValid === false ? "invalid" : ""
+          }`}
+        >
+          <label htmlFor="login">Nom d'utilisateur</label>
+          <input
+            type="text"
+            id="login"
+            value={usernameState.value}
+            onChange={usernameChangeHandler}
+            onBlur={validateUsernameHandler}
+          />
+        </div>
+        <div
+          className={`${"control"} ${
+            cityState.isValid === false ? "invalid" : ""
+          }`}
+        >
+          <label htmlFor="city">Ville</label>
+          <input
+            type="text"
+            id="city"
+            value={cityState.value}
+            onChange={cityChangeHandler}
+            onBlur={validateCityHandler}
+          />
+        </div>
+        <div
+          className={`${"control"} ${
+            emailState.isValid === false ? "invalid" : ""
+          }`}
+        >
+          <label htmlFor="email">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            value={emailState.value}
+            onChange={emailChangeHandler}
+            onBlur={validateEmailHandler}
+          />
+        </div>
+        <div
+          className={`${"control"} ${
+            passwordState.isValid === false ? "invalid" : ""
+          }`}
+        >
+          <label htmlFor="password">Mot de passe</label>
+          <input
+            type="password"
+            id="password"
+            value={passwordState.value}
+            onChange={passwordChangeHandler}
+            onBlur={validatePasswordHandler}
+          />
+        </div>
+        <div className="actions">
+          <Button type="submit" className="btn" disabled={!formIsValid}>
+            Valider
+          </Button>
+        </div>
+      </form>
+    </Card>
   );
 }
 
-export default Register;
+Signup.defaultProps = {
+  onRes: () => {},
+};
+
+Signup.propTypes = {
+  onRes: PropTypes.func,
+};
