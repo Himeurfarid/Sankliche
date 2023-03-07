@@ -3,7 +3,6 @@ import { Route, Routes } from "react-router-dom";
 import Register from "./pages/Register";
 import { UserContext } from "../store/user-context";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
 import Challenges from "./pages/Challenges";
 import Profil from "./pages/Profil";
 import Tips from "./pages/Tips";
@@ -34,7 +33,6 @@ function App() {
   );
   const content = (
     <>
-      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/challenges" element={<Challenges />} />
