@@ -21,14 +21,27 @@ INSERT INTO challenge (title, level_challenge, collaboration, description_challe
 VALUES ('Miam-Miam !',"A1 - Facile", 'Solo', 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', "2", "10 min",'Lorem ipsum dolor sit amet.', "Restaurant"), 
        ('Visite la ville !',"B2 - Moyen", 'Equipe', 'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..', "5", "30 min",'Lorem ipsum dolor sit amet.', "Ville");
 
-CREATE TABLE user (
-  id INT(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  lastname VARCHAR(200) NOT NULL,
-  firstname VARCHAR(100) NOT NULL,
-  username VARCHAR(10) NOT NULL,
-  email VARCHAR(900) NOT NULL,
-  hashedPassword VARCHAR(100) NOT NULL
-) engine = InnoDB default charset = latin1;
+DROP TABLE IF EXISTS users;
 
-INSERT INTO user (lastname, firstname, username, email, hashedPassword)
-VALUES ('Froissart','Lucie','Lulu','lulu@gmail.com','123456789')
+CREATE TABLE users (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    admin boolean not null default false,
+    email varchar(255) UNIQUE NOT NULL,
+    firstname varchar(255) NOT NULL,
+    lastname varchar(255) NOT NULL,
+    login varchar(255) DEFAULT NULL,
+    city varchar(255) NOT NULL,
+    hashedPassword varchar(255) NOT NULL
+) ENGINE = InnoDB DEFAULT CHARSET = utf8;
+
+INSERT INTO users (admin, email, firstname, lastname, login, city, hashedPassword)
+VALUES
+  (
+    true,
+    "farid@mail.fr",
+    "Farid",
+    "Himeur",
+    "farid13",
+    "Chalons en Champagne",
+    "$argon2id$v=19$m=16,t=2,p=1$emVmZXpmemZlemVmZWR6ZXplZg$rqZkhxu5YbqCGHPNrjJZpQ"
+  );

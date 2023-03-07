@@ -1,57 +1,144 @@
-import { Link } from "react-router-dom";
-import "../styles/Login.css";
+import React, { useState, useEffect, useReducer, useContext } from "react";
 
-function Login() {
+import Modal from "../../UI/Modal";
+import Card from "../../UI/Card";
+import Button from "../../UI/Button";
+import { emailReducer, passwordReducer } from "../../_services/loginHelpers";
+import { UserContext } from "../../store/user-context";
+
+export default function Login() {
+  const { setToken, setId, setCity, setFirstname, setLastname, setAdmin } =
+    useContext(UserContext);
+
+  const [error, setError] = useState(false);
+  const [formIsValid, setFormIsValid] = useState(false);
+
+  const [emailState, dispatchEmail] = useReducer(emailReducer, {
+    value: "",
+    isValid: null,
+  });
+  const [passwordState, dispatchPassword] = useReducer(passwordReducer, {
+    value: "",
+    isValid: null,
+  });
+
+  useEffect(() => {
+    const identifier = setTimeout(() => {
+      setFormIsValid(emailState.isValid && passwordState.isValid);
+    }, 500);
+
+    return () => {
+      clearTimeout(identifier);
+    };
+  }, [emailState.isValid, passwordState.isValid]);
+
+  const emailChangeHandler = (event) => {
+    dispatchEmail({ type: "USER_INPUT", val: event.target.value });
+  };
+
+  const passwordChangeHandler = (event) => {
+    dispatchPassword({ type: "USER_INPUT", val: event.target.value });
+  };
+
+  const validateEmailHandler = () => {
+    dispatchEmail({ type: "INPUT_BLUR" });
+  };
+
+  const validatePasswordHandler = () => {
+    dispatchPassword({ type: "INPUT_BLUR" });
+  };
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+    const url = import.meta.env.VITE_BACKEND_URL;
+
+    fetch(`${url}/api/login`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: emailState.value,
+        password: passwordState.value,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.token) {
+          setToken(data.token);
+          setId(data.id);
+          setCity(data.city);
+          setFirstname(data.firstname);
+          setLastname(data.lastname);
+          setAdmin(data.admin);
+        } else {
+          setTimeout(() => {
+            setError(true);
+          }, 500);
+        }
+      })
+      .catch(() => {
+        setError(true);
+      });
+  };
+
+  const hideErrorMessage = () => {
+    setError(false);
+  };
+
   return (
-    <main className="page-connexion">
-      <div className="form-container">
-        <section className="form-section">
-          <article id="login_image" className="login-image">
-            Sankliché
-          </article>
-          <article id="login" className="login-form">
-            <h1 className="form-title">Connexion</h1>
-            <form className="form">
-              <label htmlFor="email" className="form-label">
-                Email
-              </label>
-              <input
-                type="email"
-                autoComplete="username"
-                name="email"
-                id="email"
-                className="form-input"
-                placeholder="Exemple : johndoe@email.com"
-              />
-              <label htmlFor="password" className="form-label">
-                Mot de passe
-              </label>
-              <input
-                type="password"
-                autoComplete="current-password"
-                name="password"
-                id="password"
-                className="form-input"
-                placeholder="Exemple : 123456"
-              />
-              <Link className="form-button-link" to="/">
-                <button type="submit" className="form-button">
-                  Se connecter
-                </button>
-              </Link>
-              <p className="form-error">Email ou mot de passe incorrect</p>
-            </form>
-            <div className="form-links">
-              <p className="form-link-text">Vous n'avez pas de compte ?</p>
-              <a href="/register" className="form-link">
-                Créer un compte
-              </a>
-            </div>
-          </article>
-        </section>
-      </div>
-    </main>
+    <Card classNames="login">
+      {error && (
+        <Modal onClose={hideErrorMessage}>
+          <h1>Erreur</h1>
+          <p>
+            Une erreur est survenue. Votre email ou mot de passe n'est pas
+            correct. Veuillez réessayer plus tard
+          </p>
+          <button
+            className="buttonlogin"
+            type="button"
+            onClick={hideErrorMessage}
+          >
+            Annuler
+          </button>
+        </Modal>
+      )}
+      <form onSubmit={submitHandler}>
+        <div
+          className={`${"control"} ${
+            emailState.isValid === false ? "invalid" : ""
+          }`}
+        >
+          <label htmlFor="email">E-Mail</label>
+          <input
+            type="email"
+            id="email"
+            value={emailState.value}
+            onChange={emailChangeHandler}
+            onBlur={validateEmailHandler}
+          />
+        </div>
+        <div
+          className={`${"control"} ${
+            passwordState.isValid === false ? "invalid" : ""
+          }`}
+        >
+          <label htmlFor="password">Mot de passe</label>
+          <input
+            type="password"
+            id="password"
+            value={passwordState.value}
+            onChange={passwordChangeHandler}
+            onBlur={validatePasswordHandler}
+          />
+        </div>
+        <div>
+          <Button type="submit" className="buttonlogin" disabled={!formIsValid}>
+            Valider
+          </Button>
+        </div>
+      </form>
+    </Card>
   );
 }
-
-export default Login;

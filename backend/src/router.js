@@ -2,33 +2,22 @@ const express = require("express");
 
 const router = express.Router();
 
-const itemControllers = require("./controllers/itemControllers");
-
-router.get("/items", itemControllers.browse);
-router.get("/items/:id", itemControllers.read);
-router.put("/items/:id", itemControllers.edit);
-router.post("/items", itemControllers.add);
-router.delete("/items/:id", itemControllers.destroy);
-
+const { hashPassword } = require("./auth");
 const challengeControllers = require("./controllers/challengeControllers");
+const categoryControllers = require("./controllers/categoryControllers");
+const usersControllers = require("./controllers/userControllers");
 
 router.get("/challenges", challengeControllers.getChallenges);
 router.get("/challenges/:id", challengeControllers.getOneChallenge);
 
-const categoryControllers = require("./controllers/categoryControllers");
-
 router.get("/categories", categoryControllers.getCategory);
 router.get("/categories/:id", categoryControllers.getOneCategory);
 
-const userControllers = require("./controllers/userControllers");
-
-router.get("/users", userControllers.getUsers);
-router.get("/users/:id", userControllers.getOneUser);
-
-router.post("users", userControllers.addUser);
-router.post("users/:id", userControllers.addUser);
-
-router.put("users", userControllers.editUser);
-router.put("users/:id", userControllers.editUser);
+router.get("/users", usersControllers.browse);
+router.get("/users/:id", usersControllers.read);
+router.post("/api/login", usersControllers.login);
+router.post("/users/", hashPassword, usersControllers.add);
+router.put("/users/:id", usersControllers.edit);
+router.delete("/users/:id", usersControllers.destroy);
 
 module.exports = router;
