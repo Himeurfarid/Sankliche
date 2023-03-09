@@ -1,6 +1,6 @@
 const models = require("../models");
 
-const getTeam = (req, res) => {
+const getTeams = (req, res) => {
   models.team
     .findAll()
     .then(([rows]) => {
@@ -80,7 +80,7 @@ const destroyTeam = (req, res) => {
 };
 
 module.exports = {
-  getTeam,
+  getTeams,
   getOneTeam,
   editTeam,
   addTeam,

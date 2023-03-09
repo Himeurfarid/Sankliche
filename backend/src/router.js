@@ -31,4 +31,9 @@ router.post("users/:id", userControllers.addUser);
 router.put("users", userControllers.editUser);
 router.put("users/:id", userControllers.editUser);
 
+const teamControllers = require("./controllers/teamControllers");
+
+router.get("/teams", teamControllers.getTeams);
+router.get("/teams/:id", teamControllers.getOneTeam);
+
 module.exports = router;
